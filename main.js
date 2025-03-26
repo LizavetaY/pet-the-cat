@@ -38,12 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
       chosenImageIndex = chosenImageIndex === 2 ? 3 : 2;
       catContainer.style.backgroundImage = `url(img/${catsImages[chosenImageIndex]}.png)`;
       content.style.opacity = `${(timer - 40) / 40}`;
+      content.style.display = 'flex';
 
       updateCatImage = 2;
     } else if (updateCatImage < 0 && timer > 40) {
       chosenImageIndex =  4;
       catContainer.style.backgroundImage = `url(img/${catsImages[chosenImageIndex]}.png)`;
       content.style.opacity = `${(timer - 40) / 40}`;
+      content.style.display = 'flex';
 
       updateCatImage = 2;
     } else if (updateCatImage < 0 && timer > 20) {
