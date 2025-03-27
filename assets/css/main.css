@@ -4,17 +4,22 @@
   100% { background-position: 50% 50%; }
 }
 
-h1, p {
-  margin: 0;
-  padding: 0;
+:root {
+  --toggle-wrapper-width: 150px;
+  --toggle-wrapper-height: 50px;
+  --switch-width-height: 45px;
+  --border-radius: 25px;
 }
 
 body {
-  margin: 0;
   font-family: 'Arial', sans-serif;
   font-size: 18px;
   line-height: 1.8;
   color: #333;
+}
+
+.hidden {
+  display: none;
 }
 
 .centered {
@@ -34,6 +39,10 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 960px;
   padding: 3rem;
   background-color: #fff;
@@ -43,6 +52,36 @@ body {
 
 .content > *:nth-child(n + 2) {
   margin-top: 2rem;
+}
+
+.toggle-wrapper {
+  position: relative;
+  display: block;
+  width: var(--toggle-wrapper-width);
+  height: var(--toggle-wrapper-height);
+  border-radius: var(--border-radius);
+  background-color: #F7C5CC;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.1s linear;
+}
+
+.switcher {
+  position: absolute;
+  top: 50%;
+  right: 96%;
+  display: block;
+  width: var(--switch-width-height);
+  height: var(--switch-width-height);
+  border-radius: var(--border-radius);
+  background-color: #FFF1C1;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.1);
+  transform: translate(96%, -50%);
+}
+
+.switcher.active {
+  background-color: #FFABAB;
+  box-shadow: 0 0 .2rem rgba(255, 255, 255, 0.1);
 }
 
 .title {
@@ -59,7 +98,7 @@ body {
   display: block;
   width: 150px;
   height: 150px;
-  background-image: url(img/cat_happy_1.png);
+  background-image: url(assets/img/cat_happy_1.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

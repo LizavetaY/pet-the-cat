@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (updateCatImage < 0 && timer > 80) {
       chosenImageIndex = chosenImageIndex === 0 ? 1 : 0;
-      catContainer.style.backgroundImage = `url(img/${catsImages[chosenImageIndex]}.png)`;
+      catContainer.style.backgroundImage = `url(assets/img/${catsImages[chosenImageIndex]}.png)`;
       content.style.opacity = '1';
       content.style.display = 'flex';
       
@@ -36,21 +36,21 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (updateCatImage < 0 && timer > 60) {
       chosenImageIndex = chosenImageIndex < 2 ? 2 : chosenImageIndex;
       chosenImageIndex = chosenImageIndex === 2 ? 3 : 2;
-      catContainer.style.backgroundImage = `url(img/${catsImages[chosenImageIndex]}.png)`;
+      catContainer.style.backgroundImage = `url(assets/img/${catsImages[chosenImageIndex]}.png)`;
       content.style.opacity = `${(timer - 40) / 40}`;
       content.style.display = 'flex';
 
       updateCatImage = 2;
     } else if (updateCatImage < 0 && timer > 40) {
       chosenImageIndex =  4;
-      catContainer.style.backgroundImage = `url(img/${catsImages[chosenImageIndex]}.png)`;
+      catContainer.style.backgroundImage = `url(assets/img/${catsImages[chosenImageIndex]}.png)`;
       content.style.opacity = `${(timer - 40) / 40}`;
       content.style.display = 'flex';
 
       updateCatImage = 2;
     } else if (updateCatImage < 0 && timer > 20) {
       chosenImageIndex = 5;
-      catContainer.style.backgroundImage = `url(img/${catsImages[chosenImageIndex]}.png)`;
+      catContainer.style.backgroundImage = `url(assets/img/${catsImages[chosenImageIndex]}.png)`;
       content.style.opacity = '0';
       content.style.display = 'none';
 

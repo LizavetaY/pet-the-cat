@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pet the cat</title>
+  <title>Annoying page</title>
   
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="toggle.js"></script>
   <script defer src="main.js"></script>
 </head>
 <body>
   <div id="content" class="content-wrapper">
     <div class="content">
-      <h1 class="centered title">Pet the cat project</h1>
-  
-      <hr/>
-      <p class="centered">This little cat just wants some of your attention!</p>
-      <hr/>
-      <p>You can <strong>pet him</strong> or simply <strong>drag and drop him</strong> anywhere on your page!</p>
-      <p>Just <strong>DON’T LET HIM FALL ASLEEP</strong>! Because your page will disappear!</p>
-      <p><i>No worries!</i> Just pet him to see your page again.</p>
+      <p>Show content:</p>
+      <div id="toggle" class="toggle-wrapper">
+        <span id="switcher" class="switcher"></span>
+      </div>
+      <div id="content-main" class="hidden">
+        <h1 class="centered title">Pet the cat project</h1>
+    
+        <hr/>
+        <p class="centered">This little cat just wants some of your attention!</p>
+        <hr/>
+        <p>You can <strong>pet him</strong> or simply <strong>drag and drop him</strong> anywhere on your page!</p>
+        <p>Just <strong>DON’T LET HIM FALL ASLEEP</strong>! Because your page will disappear!</p>
+        <p><i>No worries!</i> Just pet him to see your page again.</p>
+      </div>
     </div>
   </div>
 
